@@ -1,0 +1,22 @@
+@startuml
+
+package sample <<Folder>>{
+package Nodes <<Folder>>{
+class Arrows
+class Begin
+class End
+class Solution
+class Operation
+}
+package decoration <<Folder>>{
+interface Diagram
+abstract class Decoration implements Diagram
+class Decor extends Decoration
+class Idea extends Decoration
+}
+class Main extends javafx.application.Application
+class Controller implements javafx.fxml.Initializable
+class Basis
+}
+
+@enduml
