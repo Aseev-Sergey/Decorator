@@ -21,8 +21,10 @@ public class Decor extends Decoration {
         textDecor = new Text[]{
                 new Text(130, 110, "Нарядить ёлку"),
                 new Text(140, 250, "Есть игрушки?"),
+                new Text(249, 248, "Да"),
+                new Text(95, 248, "Нет"),
                 new Text(250, 330, "Наряжать ёлку")
         };
-        pane.getChildren().addAll(textDecor[0], textDecor[1], textDecor[2]);
+        pane.getChildren().addAll(textDecor[0], textDecor[1], textDecor[2], textDecor[3], textDecor[4]);
     }
 }
