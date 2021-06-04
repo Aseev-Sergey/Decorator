@@ -18,10 +18,10 @@
 
 Работа кнопки "Предложение идей"
 
-![1](https://user-images.githubusercontent.com/85245803/120665625-a0635380-c494-11eb-836d-b8c7c56632b8.png)
+![1](https://user-images.githubusercontent.com/85245803/120768805-347cfb80-c525-11eb-816f-44f37141ed19.png)
 
 Работа кнопки "Наряжение ёлки"
 
-![2](https://user-images.githubusercontent.com/85245803/120665657-a6593480-c494-11eb-9e3e-aa0c94c6f19d.png)
+![2](https://user-images.githubusercontent.com/85245803/120768853-3e9efa00-c525-11eb-89ab-2ab84ceb5312.png)
 
 Действие кнопки "Закрыть" прекращает работу программы
