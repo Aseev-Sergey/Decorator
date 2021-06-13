@@ -10,7 +10,7 @@ public class End {
     private Circle outer;
 
     public End(){
-        outer = new Circle(180, 460, 20);
+        outer = new Circle(180, 730, 20);
         inner = new Circle(outer.getCenterX(), outer.getCenterY(), outer.getRadius()-5, Color.WHITE);
         filled = new Circle(outer.getCenterX(), outer.getCenterY(), outer.getRadius()-10);
     }

@@ -11,8 +11,8 @@ class Operation
 package decoration <<Folder>>{
 interface Diagram
 abstract class Decoration implements Diagram
-class Decor extends Decoration
-class Idea extends Decoration
+class Branch extends Decoration
+class Cycle extends Decoration
 }
 class Main extends javafx.application.Application
 class Controller implements javafx.fxml.Initializable

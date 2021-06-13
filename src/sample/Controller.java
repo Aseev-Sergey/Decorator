@@ -2,11 +2,12 @@ package sample;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.Pane;
-import sample.decoration.Decor;
+import sample.decoration.Branch;
 import sample.decoration.Diagram;
-import sample.decoration.Idea;
+import sample.decoration.Cycle;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,9 +18,8 @@ public class Controller implements Initializable {
     private Basis basis = new Basis();
     public Pane scheme;
 
-    public void clickIdea(ActionEvent actionEvent) {
-        paneClear();
-        diag = new Idea(new Diagram() {
+    public void clickCycle(ActionEvent actionEvent) {
+        diag = new Cycle(new Diagram() {
             @Override
             public void draw(Pane pane) {
 
@@ -29,9 +29,8 @@ public class Controller implements Initializable {
 
     }
 
-    public void clickDecor(ActionEvent actionEvent) {
-        paneClear();
-        diag = new Decor(new Diagram() {
+    public void clickBranch(ActionEvent actionEvent) {
+        diag = new Branch(new Diagram() {
             @Override
             public void draw(Pane pane) {
 
@@ -49,32 +48,21 @@ public class Controller implements Initializable {
             basis.getArrows().getLineBToOp(),
             basis.getArrows().getArrowBToOp(),
             basis.getOperation().getOper1(),
-            basis.getArrows().getLineOpToSol(),
-            basis.getArrows().getArrowOpToSol(),
-            basis.getSolution().getSol(),
-            basis.getArrows().getLineSolToE1(),
-            basis.getArrows().getLineSolToE2(),
-            basis.getArrows().getLineSolToE3(),
-            basis.getArrows().getLineSolToE4(),
-            basis.getArrows().getArrowSolToE(),
-            basis.getArrows().getLineSolToOp1(),
-            basis.getArrows().getLineSolToOp2(),
-            basis.getArrows().getArrowSolToOp(),
-            basis.getOperation().getOper2(),
-            basis.getArrows().getLineOpToE1(),
-            basis.getArrows().getLineOpToE2(),
+            basis.getArrows().getLineOptoE(),
+            basis.getArrows().getArrowOpToE(),
             basis.getEnd().getOuter(),
             basis.getEnd().getInner(),
             basis.getEnd().getFilled());
     }
 
-    private void paneClear(){
-        scheme.getChildren().clear();
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         drawBasis();
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    public void clickClear(ActionEvent actionEvent) {
+        scheme.getChildren().clear();
         drawBasis();
     }
 }
